@@ -64,6 +64,14 @@ app.get('/about', (req, res)=>{
 });
 } );
 
+app.get('/projects', (req, res)=>{
+  res.render('projects.hbs', {
+  pageTitle: 'Projects Page',
+  currentYear: new Date().getFullYear(),
+  welcomeMessage: "Portfolio page here!"
+});
+} );
+
 // /bad -- send back json with errorMessage property
 
 app.get('/bad', (req, res)=>{
